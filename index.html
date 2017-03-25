@@ -23,7 +23,9 @@
             list-style: none;
             padding-left: 0;
         }
-        .titillium {
+        h1.titillium, h2.titillium {
+            font-weight: bold;
+            font-size: 3.2em !important;
             font-family: 'Titillium Web', sans-serif;
         }
         .roboto {
@@ -34,6 +36,15 @@
             font-size: 2.4em;
             font-family: 'Lobster', cursive;
         }
+        .grid {
+            width: 815px;
+            height: 100vh;
+            overflow-y: hidden;
+        }
+        .grid-item {
+            width: 163px;
+            float: left;
+        }
     </style>
 </head>
 
@@ -41,14 +52,41 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div class="cover uk-vertical-align uk-height-viewport">
-        <div class="uk-vertical-align-middle uk-container">
+    <div class="cover uk-height-viewport">
+        <div class="">
             <div class="uk-grid">
                 <div class="header uk-width-1-2 uk-container-center">
                     <h1 style="font-size: 3rem" class="titillium">Siska & Sendy</h1>
                 </div>
                 <div class="uk-width-1-2 uk-container-center">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet nulla atque facere perspiciatis, unde asperiores reprehenderit facilis maxime fugit. Natus, quis exercitationem recusandae quos facere quaerat reiciendis dolore facilis aut.
+                    <div class="grid">
+                        <img src="assets/img/pic-1.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-2.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-3.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-4.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-5.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-6.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-7.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-8.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-9.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-10.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-11.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-13.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-15.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-16.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-17.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-18.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-19.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-20.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-21.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-22.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-23.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-24.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-25.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-26.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-27.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-28.jpg" alt="" class="grid-item">
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,13 +97,12 @@
             <div class="uk-width-1-2 uk-container-center uk-text-center" style="font-size: 1.6rem">
                 <p class="rtl" style="font-size: 2.2em">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</p>
                 <p class="rtl" style="font-size: 2.2em">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
-                <h2 class="title titillium" style="font-size: 2em; color: #eee;">Siska & Sendy</h2>
                 <p class="preambule roboto">
                     By the Grace and Blessing of God, we, as parents Request the honor of your presence at the wedding of our son and daughter
                 </p>
                 <p><span class="lobster">Siska Restu Anggraeny Iskandar</span>
                     <div class="person-caption roboto">
-                        Daughter of Wawan Sopwan and Amanah
+                        Daughter of Wawan Sopwan, S.Pd. M.Pd. (Alm) and Amanah, S.Pd.
                     </div>
                 </p>
 
@@ -73,14 +110,14 @@
 
                 <p><span class="lobster">Sendy Aditya Suryana</span>
                     <div class="person-caption roboto">
-                        Son of Tatang Suryana and Teti Suci Nugraha
+                        Son of Tatang Suryana, S.H. and Teti Suci Nugraha
                     </div>
                 </p>
                 <div class="details roboto">
                     <ul>
                         <li>
                             on
-                            <time datetime="2017-04-17 09:00">April 17, 2017 09:00 - 12:00</time>
+                            <time datetime="2017-04-17 09:00">April 17, 2017 at 09:00 - 12:00</time>
                         </li>
                         <li>Venue at Jalan Rawa Onom, Kota Banjar, Jawa Barat - Indonesia</li>
                     </ul>
@@ -120,9 +157,15 @@
 
     <script src="assets/js/jquery-3.1.1.slim.min.js"></script>
     <script src="assets/js/uikit.min.js"></script>
+    <script src="assets/js/masonry.min.js"></script>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg5zSgzmcsUdacQISNPQHXPjxeWTpMCg0&callback=initMap"></script>
-
+    <script>
+        var $grid = $('.grid').masonry({
+            itemSelector: '.grid-item',
+            fitWidth: true
+        })
+    </script>
     <script>
         function initMap() {
             var lat = -7.356809;
