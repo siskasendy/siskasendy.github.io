@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Invitation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lateef|Lobster|Roboto+Slab|Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/uikit.min.css">
+    <style>
+        body {
+            line-height: 2.2;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .titillium {
+            font-family: 'Titillium Web', sans-serif;
+        }
+        .roboto {
+            font-size: 0.9em;
+            font-family: 'Roboto Slab', serif;
+        }
+        .lobster {
+            font-size: 2.4em;
+            font-family: 'Lobster', cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="cover uk-vertical-align uk-height-viewport">
+        <div class="uk-vertical-align-middle uk-container">
+            <div class="uk-grid">
+                <div class="header uk-width-1-2 uk-container-center">
+                    <h1 style="font-size: 3rem" class="titillium">Siska & Sendy</h1>
+                </div>
+                <div class="uk-width-1-2 uk-container-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet nulla atque facere perspiciatis, unde asperiores reprehenderit facilis maxime fugit. Natus, quis exercitationem recusandae quos facere quaerat reiciendis dolore facilis aut.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cover" style="background-color: black; color: #eee; padding: 10em 0;">
+        <div class="uk-grid">
+            <div class="uk-width-1-2 uk-container-center uk-text-center" style="font-size: 1.6rem">
+                <p class="rtl" style="font-size: 2.2em">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</p>
+                <p class="rtl" style="font-size: 2.2em">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+                <h2 class="title titillium" style="font-size: 2em; color: #eee;">Siska & Sendy</h2>
+                <p class="preambule roboto">
+                    By the Grace and Blessing of God, we, as parents Request the honor of your presence at the wedding of our son and daughter
+                </p>
+                <p><span class="lobster">Siska Restu Anggraeny Iskandar</span>
+                    <div class="person-caption roboto">
+                        Daughter of Wawan Sopwan and Amanah
+                    </div>
+                </p>
+
+                <p>and</p>
+
+                <p><span class="lobster">Sendy Aditya Suryana</span>
+                    <div class="person-caption roboto">
+                        Son of Tatang Suryana and Teti Suci Nugraha
+                    </div>
+                </p>
+                <div class="details roboto">
+                    <ul>
+                        <li>
+                            on
+                            <time datetime="2017-04-17 09:00">April 17, 2017 09:00 - 12:00</time>
+                        </li>
+                        <li>Venue at Jalan Rawa Onom, Kota Banjar, Jawa Barat - Indonesia</li>
+                    </ul>
+                </div>
+
+                <p class="roboto">
+                    It is an appreaciation and happiness for us if you can attend the reception to give a blessing pray for our son and daughter.
+                </p>
+                <p class="rtl" style="font-size: 2.2em">
+                    وَ السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
+                </p>
+                <div class="uk-grid">
+                    <div class="uk-width-1-2 roboto">
+                        The Family of
+                        <ul>
+                            <li>Wawan Sopwan, S.Pd. M.Pd. (Alm)</li>
+                            <li>Amanah, S.Pd.</li>
+                        </ul>
+                    </div>
+                    <div class="uk-width-1-2 roboto">
+                        The Family of
+                        <ul style="list-style: none;">
+                            <li>Tatang Suryana, S.H.</li>
+                            <li>Teti Suci Nugraha</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-cover-container">
+        <div class="uk-width-1-1">
+            <div id="map" style="width: 100%; height: 50vh;"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.1.1.slim.min.js"></script>
+    <script src="assets/js/uikit.min.js"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg5zSgzmcsUdacQISNPQHXPjxeWTpMCg0&callback=initMap"></script>
+
+    <script>
+        function initMap() {
+            var lat = -7.356809;
+            var lng = 108.5612098;
+            var venue = { lat: lat, lng: lng };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: venue,
+                scrollwheel: false
+            });
+            var contentString = "<a href='http://maps.google.com/maps?daddr=" + lat + "," + lng + "&saddr=' target='_blank'>Click Here to Navigate</a>";
+            var infoWindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+            var marker = new google.maps.Marker({
+                position: venue,
+                map: map,
+                title: "Siska's House"
+            });
+            marker.addListener('click', function () {
+                infoWindow.open(map, marker);
+            });
+        }
+    </script>
+</body>
+
+</html>
