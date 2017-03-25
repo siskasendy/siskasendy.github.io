@@ -23,26 +23,33 @@
             list-style: none;
             padding-left: 0;
         }
-        h1.titillium, h2.titillium {
+        
+        h1.titillium,
+        h2.titillium {
             font-weight: bold;
             font-size: 3.2em !important;
             font-family: 'Titillium Web', sans-serif;
         }
+        
         .roboto {
             font-size: 0.9em;
             font-family: 'Roboto Slab', serif;
         }
+        
         .lobster {
             font-size: 2.4em;
             font-family: 'Lobster', cursive;
         }
+        
         .grid {
             width: 815px;
             height: 100vh;
             overflow-y: hidden;
         }
+        
         .grid-item {
             width: 163px;
+            height: auto;
             float: left;
         }
     </style>
@@ -56,7 +63,7 @@
         <div class="">
             <div class="uk-grid">
                 <div class="header uk-width-1-2 uk-container-center">
-                    <h1 style="font-size: 3rem" class="titillium">Siska & Sendy</h1>
+                    <h1 style="font-size: 3rem;position: absolute;left: 30px;bottom: 120px;" class="titillium">Siska & Sendy</h1>
                 </div>
                 <div class="uk-width-1-2 uk-container-center">
                     <div class="grid">
@@ -86,6 +93,11 @@
                         <img src="assets/img/pic-26.jpg" alt="" class="grid-item">
                         <img src="assets/img/pic-27.jpg" alt="" class="grid-item">
                         <img src="assets/img/pic-28.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-29.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-30.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-31.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-32.jpg" alt="" class="grid-item">
+                        <img src="assets/img/pic-33.jpg" alt="" class="grid-item">
                     </div>
                 </div>
             </div>
@@ -157,14 +169,26 @@
 
     <script src="assets/js/jquery-3.1.1.slim.min.js"></script>
     <script src="assets/js/uikit.min.js"></script>
-    <script src="assets/js/masonry.min.js"></script>
+    <script src="assets/js/lazyload.min.js"></script>
+    <script src="assets/js/freewall.js"></script>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg5zSgzmcsUdacQISNPQHXPjxeWTpMCg0&callback=initMap"></script>
     <script>
-        var $grid = $('.grid').masonry({
-            itemSelector: '.grid-item',
-            fitWidth: true
-        })
+        $(function () {
+            var wall = new Freewall('.grid');
+            wall.reset({
+                selector: '.grid-item',
+                cellW: function (width) {
+                    var cellWidth = width / 5;
+                    return cellWidth;
+                },
+                cellH: 'auto',
+                animate: true,
+                gutterX: 0,
+                gutterY: 0
+            })
+            wall.fitZone();
+        });
     </script>
     <script>
         function initMap() {
