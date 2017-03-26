@@ -1,4 +1,4 @@
-var URL = "http://invitation-sendz.rhcloud.com/"
+var URL = "https://invitation-sendz.rhcloud.com/"
 
 $(document).ready(function () {
     var token = location.pathname.split("/")[2];
