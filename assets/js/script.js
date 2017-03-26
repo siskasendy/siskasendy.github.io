@@ -4,7 +4,6 @@ var loadingScreen;
 $(document).ready(function () {
     var token = location.hash.split("#")[1];
     getTokenDetails(token);
-    window.loadingScreen.finish();
 });
 
 function getTokenDetails(token) {
