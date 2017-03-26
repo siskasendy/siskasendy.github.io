@@ -8,7 +8,7 @@ function getTokenDetails(token) {
     $.get(URL + "auth/" + token, function (data) {
         $('#token_name').html(data.name);
         $('#token_location').html(data.address);
-        translatePage(data.address);
+        translatePage(data.language);
         console.log(data);
     });
 }
