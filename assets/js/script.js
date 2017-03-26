@@ -4,6 +4,7 @@ var loadingScreen;
 $(document).ready(function () {
     var token = location.hash.split("#")[1];
     getTokenDetails(token);
+    window.loadingScreen.finish();
 });
 
 function getTokenDetails(token) {
@@ -30,6 +31,4 @@ function translatePage(langCode) {
     } else {
         $.getJSON('assets/js/language/EN.json', translate);
     }
-
-    window.loadingScreen.finish();
 }
