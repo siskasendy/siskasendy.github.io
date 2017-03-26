@@ -1,5 +1,4 @@
 var langs = ['EN', 'ID'];
-var langCode = '';
 var langJS = null;
 
 
@@ -10,8 +9,7 @@ var translate = function (jsdata) {
     });
 }
 
-
-langCode = navigator.language.substr(0, 2);
+console.log(langCode);
 
 if (langCode in langs)
     $.getJSON('assets/js/language/' + langCode + '.json', translate);
