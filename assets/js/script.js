@@ -24,6 +24,8 @@ function translatePage(langCode) {
         });
     }
 
+    console.log(langCode);
+
     if (langCode in langs)
         $.getJSON('assets/js/language/' + langCode + '.json', translate);
     else
