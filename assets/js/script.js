@@ -9,7 +9,6 @@ function getTokenDetails(token) {
         $('#token_name').html(data.name);
         $('#token_location').html(data.address);
         translatePage(data.language);
-        console.log(data);
     });
 }
 
@@ -24,8 +23,6 @@ function translatePage(langCode) {
             $(this).html(strTr);
         });
     }
-
-    console.log(langCode);
 
     if (langCode in langs)
         $.getJSON('assets/js/language/' + langCode + '.json', translate);
