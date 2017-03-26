@@ -13,7 +13,6 @@ function getTokenDetails(token) {
 }
 
 function translatePage(langCode) {
-    var langs = ['EN', 'ID'];
     var langJS = null;
 
 
@@ -26,8 +25,9 @@ function translatePage(langCode) {
 
     console.log(langCode);
 
-    if (langCode in langs)
-        $.getJSON('assets/js/language/' + langCode + '.json', translate);
-    else
+    if (langCode == 'ID') {
+        $.getJSON('assets/js/language/ID.json', translate);
+    } else {
         $.getJSON('assets/js/language/EN.json', translate);
+    }
 }
