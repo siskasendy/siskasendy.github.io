@@ -1,7 +1,7 @@
 var URL = "https://invitation-sendz.rhcloud.com/"
 
 $(document).ready(function () {
-    var token = location.pathname.split("?")[1];
+    var token = location.pathname.split("?")[0];
     console.log(token);
     getTokenDetails(token);
 });
