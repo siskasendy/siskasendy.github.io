@@ -1,6 +1,4 @@
 var URL = "https://invitation-sendz.rhcloud.com/";
-var langCode = "";
-
 $(document).ready(function () {
     var token = location.hash.split("#")[1];
     getTokenDetails(token);
